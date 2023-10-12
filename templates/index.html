@@ -1,0 +1,130 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Knowunity PDF za darmo</title>
+    <style>
+
+        body {
+            background: rgb(151,167,193);
+            background: linear-gradient(90deg, rgba(151,167,193,1) 5%, rgba(67,103,195,1) 23%, rgba(80,97,162,1) 25%, rgba(39,126,166,1) 44%, rgba(92,159,173,1) 95%);
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 20px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        label {
+            font-size: 24px;
+        }
+
+        #url {
+            width: 50%;
+            font-size: 24px;
+            padding: 5px 10px;
+            border: 2px solid #4caf50;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            font-size: 24px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        a {
+            color: #4caf50;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h3 {
+            text-align: center;
+        }
+        h4{
+            text-align: center;
+        }
+        .kawa{
+            text-align:center;
+        }
+        .how {
+            text-align: center;
+            background-color: white;
+            color: #fff;
+            padding: 20px;
+            margin-bottom: 50px;
+            text-align: center;
+            width: 23%;
+            margin: 0 auto;
+        }
+        .form {
+            margin-top: 50px;
+        }
+        .donat {
+            text-align: center;
+        }
+        .link-gotowy {
+            background-color: #fff;
+            color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>KnowUnity: Pobieraj Notatki ZA DARMO - Dostęp Do NOTATEK Bez Subskrypcji</h1>
+    <div class="how">
+    <a href="https://telegra.ph/KnowUnity-Pobieraj-Notatki-ZA-DARMO---Dost%C4%99p-Do-NOTATEK-Bez-Subskrypcji-10-12"">Instrukcja jak pobrać notatkę ZA DARMO</a>
+    </div>
+    <div class="form">
+    <form action="/" method="post">
+        <label for="url">URL :</label>
+        <input type="text" id="url" name="url" required>
+        <button type="submit">Pobierz!</button>
+    </form>
+    </div>
+    <div class="link-gotowy">
+    {% if url %}
+        <h2>PDF Link :</h2>
+        <a href="{{ url }}" target="_blank">{{ url }}</a>
+    {% endif %}
+    </div>
+    <h3>Created by Liubomyr Meush</h3>
+    <h4>11.10.2023</h4>
+    <div class="donat">
+    <a href="https://buycoffee.to/lmeush" target="_blank"><img src="https://buycoffee.to/btn/buycoffeeto-btn-primary.svg" style="width: 211px" alt="Postaw mi kawę na buycoffee.to"></a>
+    </div>
+</body>
+</html>
