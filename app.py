@@ -27,4 +27,4 @@ def get_content_url(know_id):
     return None
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=80) # host(instead of 0.0.0.0 will be the IP address of the server) and port(http - 80 port, https - 443)  - for display site on server 
